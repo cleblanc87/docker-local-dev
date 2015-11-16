@@ -6,3 +6,11 @@ main:
     - DEFAULT_HOST=arthrex.dev
   volumes: 
     - /var/run/docker.sock:/tmp/docker.sock
+readme:
+  image: httpd
+  ports:
+    - 80
+  environment: 
+    - VIRTUAL_HOST=arthrex.dev
+  volumes: 
+    - ./readme:/usr/local/apache2/htdocs/
