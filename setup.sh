@@ -17,6 +17,12 @@ sudo cp $(brew list dnsmasq | grep /homebrew.mxcl.dnsmasq.plist$) /Library/Launc
 sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
 #Create the zone, assume the default ip is being used by the local docker-machine...
 echo address=/dev/$(docker-machine ip default) >> /usr/local/etc/dnsmasq.conf
+
+# Setup local resolver
+sudo tee /etc/resolver/dev >/dev/null <<EOF
+nameserver 127.0.0.1
+EOF
+
 # restart dnsmasq
 sudo launchctl stop homebrew.mxcl.dnsmasq
 sudo launchctl start homebrew.mxcl.dnsmasq

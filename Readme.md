@@ -8,7 +8,7 @@ see https://github.com/jwilder/nginx-proxy for more info
 
 1. Clone Repo
 2. run `./setup.sh && docker-compose up -d`
-
+git s
 ## Setup.sh
 
 Run this file to configure a local .dev dns zone to route to your local docker-machine
