@@ -1,0 +1,8 @@
+main:
+  image: jwilder/nginx-proxy
+  ports:
+    - 80:80
+  environment: 
+    - DEFAULT_HOST=arthrex.dev
+  volumes: 
+    - /var/run/docker.sock:/tmp/docker.sock
