@@ -8,8 +8,6 @@ main:
     - /var/run/docker.sock:/tmp/docker.sock
 readme:
   image: httpd
-  ports:
-    - 80
   environment: 
     - VIRTUAL_HOST=arthrex.dev
   volumes: 
