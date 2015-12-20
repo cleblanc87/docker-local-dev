@@ -14,6 +14,8 @@ see https://github.com/jwilder/nginx-proxy for more info
 Run this file to configure a local .dev dns zone to route to your local docker-machine
 all requests to *.dev will route through the nginx-proxy container exposed on $(docker-machine ip default):80
 
+Setup will also install https://github.com/brikis98/docker-osx-dev and configure a local .dev tld
+
 ## Dependencies
 
 local docker-machine installation 

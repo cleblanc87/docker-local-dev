@@ -3,12 +3,12 @@ main:
   ports:
     - 80:80
   environment: 
-    - DEFAULT_HOST=arthrex.dev
+    - DEFAULT_HOST=readme.dev
   volumes: 
     - /var/run/docker.sock:/tmp/docker.sock
 readme:
   image: httpd
   environment: 
-    - VIRTUAL_HOST=arthrex.dev
+    - VIRTUAL_HOST=readme.dev
   volumes: 
     - ./readme:/usr/local/apache2/htdocs/
